@@ -18,13 +18,12 @@ android {
 
     signingConfigs {
         test_twa {
-            storeFile file("test_twa_debug.jks")
-            storePassword 'test_key'
-            keyAlias 'Test Debug Key'
-            keyPassword 'test_key'
+            storeFile file("twaTest.jks")
+            storePassword 'twa_test'
+            keyAlias 'Twa Test'
+            keyPassword 'twa_test'
         }
     }
-
     buildTypes {
         debug {
             signingConfig signingConfigs.test_twa
@@ -34,6 +33,7 @@ android {
             zipAlignEnabled true
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.test_twa
         }
     }
     compileOptions {
