@@ -30,8 +30,9 @@ android {
             signingConfig signingConfigs.test_twa
         }
         release {
-            minifyEnabled false
-            signingConfig signingConfigs.test_twa
+            shrinkResources true
+            zipAlignEnabled true
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -50,7 +51,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    implementation 'saschpe.android:customtabs:2.0.0'
     implementation 'androidx.browser:browser:1.2.0'
 
 }

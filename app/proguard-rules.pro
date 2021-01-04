@@ -19,3 +19,7 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-dontwarn androidx.browser*
+-keep class androidx.browser* { *; }
+-keep interface androidx.browser* { *; }
